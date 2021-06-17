@@ -1,0 +1,15 @@
+[
+{"type":"header","version":"5.1.0","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"bagisto"},
+{"type":"table","name":"categories","database":"bagisto","data":
+[
+<br />
+<b>Fatal error</b>:  Uncaught TypeError: bin2hex(): Argument #1 ($string) must be of type string, null given in C:\Apache24\htdocs\phpMyAdmin\libraries\classes\Plugins\Export\ExportJson.php:274
+Stack trace:
+#0 C:\Apache24\htdocs\phpMyAdmin\libraries\classes\Plugins\Export\ExportJson.php(274): bin2hex(NULL)
+#1 C:\Apache24\htdocs\phpMyAdmin\libraries\classes\Export.php(1117): PhpMyAdmin\Plugins\Export\ExportJson-&gt;exportData('bagisto', 'categories', '\r\n', 'index.php?route...', 'SELECT `id`, `p...', Array)
+#2 C:\Apache24\htdocs\phpMyAdmin\libraries\classes\Controllers\ExportController.php(613): PhpMyAdmin\Export-&gt;exportTable('bagisto', 'categories', 'data', Object(PhpMyAdmin\Plugins\Export\ExportJson), '\r\n', 'index.php?route...', 'table', false, false, false, false, '1', '0', '0', '', Array)
+#3 C:\Apache24\htdocs\phpMyAdmin\libraries\classes\Routing.php(186): PhpMyAdmin\Controllers\ExportController-&gt;index(Array)
+#4 C:\Apache24\htdocs\phpMyAdmin\index.php(18): PhpMyAdmin\Routing::callControllerForRoute('/export', Object(FastRoute\Dispatcher\GroupCountBased), Object(Symfony\Component\DependencyInjection\ContainerBuilder))
+#5 {main}
+  thrown in <b>C:\Apache24\htdocs\phpMyAdmin\libraries\classes\Plugins\Export\ExportJson.php</b> on line <b>274</b><br />
