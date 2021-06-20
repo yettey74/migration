@@ -42,8 +42,17 @@ $sqlRoot = "INSERT INTO `categories` (`id`, `position`, `image`, `status`, `_lft
 
 
 //echo print_R( $bagisto );
+function ifFileRead ( $file )
+{
 
+    if( ($handle = fopen( $file , "r" )) !== FALSE ){
+        return $handle;
+    }
+
+    return false;
+}
 if( ($handle = fopen( $file , "r" )) !== FALSE ){
+//if( ($handle = ifFileRead ( $file ) )){
     
     while( ( $data = fgetcsv( $handle, 1000, ",") ) !== FALSE )
     {   
